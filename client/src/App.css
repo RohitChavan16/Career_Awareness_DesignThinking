@@ -42,3 +42,7 @@
   color: #888;
 }
 */
+
+@import "tailwindcss";
+
+@tailwind utilities;
