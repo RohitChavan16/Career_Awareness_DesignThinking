@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Search, TrendingUp, Award, Building2, BookOpen, Users, ChevronRight, MapPin, Briefcase, GraduationCap, Star, Filter, X } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 // TypeScript Interfaces
 interface Career {
@@ -65,6 +66,8 @@ interface QuizQuestion {
   options: string[];
   category: string;
 }
+
+
 
 // Sample Data
 const careers: Career[] = [
@@ -332,6 +335,7 @@ const CareerPortal = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [quizAnswers, setQuizAnswers] = useState<string[]>([]);
   const [recommendedCareers, setRecommendedCareers] = useState<Career[]>([]);
+  const navigate = useNavigate();
 
   const filteredCareers = useMemo(() => {
     return careers.filter(career => {
@@ -398,7 +402,7 @@ const CareerPortal = () => {
       setActiveView('quiz-result');
     }
   };
-
+  
   // Header Component
   const Header = () => (
     <header className="bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-600 text-white shadow-lg sticky top-0 z-50">
@@ -415,6 +419,7 @@ const CareerPortal = () => {
             <button onClick={() => setActiveView('home')} className="hover:text-indigo-200 transition">Home</button>
             <button onClick={() => setActiveView('explore')} className="hover:text-indigo-200 transition">Explore Careers</button>
             <button onClick={startQuiz} className="hover:text-indigo-200 transition">Career Quiz</button>
+            <button onClick={() => navigate("/teams")} className="hover:text-indigo-200 transition">About Us</button>
             <button className="bg-white text-indigo-700 px-4 py-2 rounded-lg font-semibold hover:bg-indigo-50 transition">Login</button>
           </nav>
         </div>
