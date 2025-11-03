@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { Search, TrendingUp, Award, Building2, BookOpen, Users, ChevronRight, MapPin, Briefcase, GraduationCap, Star, Filter, X } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 // Note: useNavigate is assumed to be available but will not navigate externally in this single-file environment.
-const useNavigate = () => (path: string) => console.log(`Navigating to: ${path}`);
 
 // --- ENHANCED TYPESCRIPT INTERFACES ---
 
@@ -1764,6 +1764,10 @@ const handleFeature = (name: FeatureName) => {
 
   const view = featureMap[name];
   // Since we are in a single-file React component, we'll simulate navigation
+  if(view === "exams"){
+    navigate("/exams");
+    return ;
+  }
   if (view === 'careers') setActiveView('explore');
   // navigate(`/${view}`);
   return;
