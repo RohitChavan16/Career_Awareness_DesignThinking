@@ -1,5 +1,8 @@
 import React from 'react';
 import { Users, Target, Eye, Heart, Award, Sparkles, Mail, Linkedin, Github } from 'lucide-react';
+import Rohit from '../assets/RohitC.jpeg'
+import Sudhindra from '../assets/Sudhindra.jpeg'
+import TanmayD from '../assets/tanmayD.jpeg'
 
 // Team member interface
 interface TeamMember {
@@ -17,7 +20,7 @@ const founders: TeamMember[] = [
     name: 'Tanmay Dahake',
     role: 'Founder',
     description: '',
-    image: '/assets/rohit-chavan.jpg',
+    image: TanmayD,
     linkedin: '#',
     email: 'rohit@careermarg.in'
   },
@@ -25,7 +28,7 @@ const founders: TeamMember[] = [
     name: 'Rohit Chavan',
     role: 'Founder',
     description: '',
-    image: '/assets/tanmay-dahake.jpg',
+    image: Rohit,
     linkedin: '#',
     email: 'tanmay@careermarg.in'
   },
@@ -41,7 +44,7 @@ const founders: TeamMember[] = [
     name: 'Akshay Diwan',
     role: 'Founder',
     description: '',
-    image: '/assets/akshay-diwan.jpg',
+    image: 'assets.Rohit',
     linkedin: '#',
     email: 'akshay@careermarg.in'
   },
@@ -49,7 +52,7 @@ const founders: TeamMember[] = [
     name: 'Sudhindra Despande',
     role: 'Founder',
     description: '',
-    image: '/assets/sudhindra-despande.jpg',
+    image: Sudhindra,
     linkedin: '#',
     email: 'sudhindra@careermarg.in'
   },
@@ -163,15 +166,15 @@ const Teams = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 lg:m-10 gap-8">
             {founders.map((founder, idx) => (
               <div key={idx} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
-                <div className="bg-gradient-to-br from-indigo-500 to-purple-600 h-48 flex items-center justify-center relative overflow-hidden">
+                <div className="bg-gradient-to-br from-indigo-500 to-purple-600 lg:h-79 h-68 flex items-center justify-center relative overflow-hidden">
                   <img
                     src={founder.image}
                     alt={founder.name}
                     onError={handleImageError}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-"
                   />
                   {/* Fallback emoji will be injected by handleImageError */}
                 </div>
