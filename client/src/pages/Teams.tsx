@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, Target, Eye, Heart, Award, Sparkles, Mail, Linkedin, Github } from 'lucide-react';
+import { Users, Target, Eye, Heart, Award, Sparkles, Mail, Linkedin } from 'lucide-react';
 import Rohit from '../assets/RohitC.jpeg'
 import Sudhindra from '../assets/Sudhindra.jpeg'
 import TanmayD from '../assets/tanmayD.jpeg'

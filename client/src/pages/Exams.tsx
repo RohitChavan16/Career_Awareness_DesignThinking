@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Filter, X, Zap, ChevronDown, BookOpen, Clock, Users, MapPin, CheckCircle, GraduationCap, Briefcase, ZapIcon } from 'lucide-react';
+import { Search, Filter, X, BookOpen, Clock, Users, MapPin, CheckCircle, GraduationCap, Briefcase, ZapIcon } from 'lucide-react';
 
 // --- 1. DATA STRUCTURE DEFINITION ---
 

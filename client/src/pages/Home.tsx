@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { Search, TrendingUp, Award, Building2, BookOpen, Users, ChevronRight, MapPin, Briefcase, GraduationCap, Star, Filter, X } from 'lucide-react';
 // Note: useNavigate is assumed to be available but will not navigate externally in this single-file environment.
 const useNavigate = () => (path: string) => console.log(`Navigating to: ${path}`);
